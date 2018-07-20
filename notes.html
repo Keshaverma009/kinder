@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!DOCTYPE html>
+<html>
+<head>
+	<title>Kinder | Notes</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="food.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div>
+				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
+			</div>
+			
+			<div>Notes</div>
+
+			
+			
+		</div>
+
+		<div id="main_section">
+			
+
+			<!-- <div id="time_main">
+				<div style="font-size: 14px;font-weight: bold;">Time: <span style="color:blue;" id = "time"></span></div>
+				<div>
+					<i class="fa fa-pencil"></i>
+				</div>
+
+			</div> -->
+
+			<div id="food_details_main">
+				<div class="food_detail">
+					<button  onclick="location.href = 'notes.html'" style="background: blue;color:white;" >Public</button>
+				<button  onclick="location.href = 'privatenotes.html'">Private</button>
+				</div>
+				
+			</div>
+
+			<div id="meal_main">
+				<div style="font-size: 14px;font-weight: bold;">Custom notes</div>
+				<div>
+					<i style="color: #39f;" class="fa fa-plus"></i>
+				</div>
+			</div>
+
+			<div id="photo_main">
+				<div style="font-size: 14px;font-weight: bold;">Photos</div>
+				<div><i style="color: #39f" class="fa fa-camera"></i></div>
+			</div>
+
+			<div id="notes_main">
+				<div style="font-size: 14px;font-weight: bold;">Notes</div>
+
+				<div>
+					<textarea   rows="10" cols="50" style="width: 100%;border: none; outline: none;resize: none" placeholder="Type notes..."></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="footer_text">
+				Create
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
+startTime();
+		</script>
+</body>
+</html>

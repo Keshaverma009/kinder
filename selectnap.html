@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kinder | Select</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="select.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div>
+				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
+			</div>
+			
+			<div>Select&nbsp;Students</div>
+
+			<div>
+				<button type="button"><i class="fa fa-ellipsis-v"></i></button>
+			</div>
+			
+		</div>
+
+		<div id="main_section">
+			<div id="activities">
+				<div class="each_activity" onclick="tick(0)"  >
+					<div class="each_activity_circle">
+						<img id="bab0" src="images/baby1.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Asutosh</div>
+				</div>
+				<div class="each_activity" onclick="tick(1)">
+					<div class="each_activity_circle">
+						<img id="bab1" src="images/baby2.jpeg"  >
+					</div>
+					<div  class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Jakie</div>
+				</div>
+				<div class="each_activity"  onclick="tick(2)">
+					<div class="each_activity_circle">
+						<img id="bab2" src="images/baby3.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Sisam</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer"  onclick="location.href = 'nap.html'">
+			<div id="footer_text">
+				Next
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function tick(e)
+	{
+		
+		counter++;
+		if(counter%2 === 0)
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'block';
+
+		  	 query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'grayscale(100%)';
+		  	
+
+		    
+		}
+		else
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'none';
+		  	  query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'none';
+
+		}
+		
+	}
+	function  firstfunction()
+
+	{
+		counter = 1;
+
+	}
+	window.addEventListener('load',firstfunction);
+		
+	</script>
+</body>
+</html>

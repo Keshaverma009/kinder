@@ -1,0 +1,284 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "sans-serif";
+	box-sizing: border-box;
+}
+
+#wrapper {
+
+}
+
+#main_header {
+	background: #fb7367;
+	color: #fff;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	padding: 10px;
+}
+
+#main_header #menu {
+	flex: 4;
+	padding: 4px;
+	padding-top: 10px;
+}
+
+#main_header #menu button[type="button"] {
+	background-color: #fb7367;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 26px;
+	cursor: pointer;
+}
+
+#main_header #class_selection {
+		flex: 3;
+	padding-top: 12px;
+	padding-right: 10px;
+	
+}
+
+#main_header #class_selection select {
+	padding: 6px;
+	outline: none;
+	border: none;
+	background-color: #fb7367;
+	color: white;
+	cursor: pointer;
+}
+
+#main_header  #add_students {
+	flex: 6;
+	text-align: right;
+}
+
+#main_header #add_students button[type="button"] {
+	border: none;
+	outline: none;
+	background-color: #ff6456;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+	color: white;
+	padding: 8px;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#main_header #settings {
+	flex: 2;
+	text-align: right;
+	padding-top: 10px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#navigation_bar {
+	background: #fb7367;
+}
+
+#navigation_bar ul#navigation_bar_ul {
+	list-style-type: none;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+}
+
+
+#navigation_bar ul#navigation_bar_ul li {
+	flex: 1;
+}
+
+#navigation_bar ul#navigation_bar_ul li a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 6px;
+	position: relative;
+}
+
+#navigation_bar ul#navigation_bar_ul li:nth-child(4){
+	text-align: right;
+}
+
+#navigation_bar ul#navigation_bar_ul li a.active::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: yellow;
+}
+
+
+
+#students {
+	position: absolute;
+	display: block;
+	background:#fb7367;
+	width: 100%;
+	padding: 13px;
+	border: 3px solid white;
+}
+
+#students #students_text {
+	text-align: center;
+	font-size: 25px;
+	color:white;
+}
+
+
+
+
+
+#attendance_details_main {
+	width: 98%;
+	margin: 5px auto;
+	margin-top: 65px;
+	background-color: blue;
+}
+
+#attendance_details_main div {
+	display: -webkit-flex;
+	border: .1px solid #39f;
+	position: relative;
+	margin: 5px auto;
+}
+
+#attendance_details_main .attendance_detail button {
+	display: inline-block;
+	color:black;
+	width: 49vw;
+	text-align: center;
+	padding: 10px;
+	background-color: white;
+	border: none;
+	font-weight: 700;
+
+}
+
+#attendance_details_main .attendance_detail #btn2{
+	float:right;
+}
+
+
+#attendance_details_main .attendance_detail button .text:hover {
+
+	cursor: pointer;
+	
+
+}
+
+i:hover{
+cursor: pointer;
+}
+
+
+
+
+#main_section {
+	padding-top: 10px;
+}
+
+#main_section #activities {
+	width: 100%;
+}
+
+#main_section #activities .each_activity {
+	width: 33.33333%;
+	float: left;
+	text-align: center;
+	padding: 5px;
+	border-radius: 50%;
+	transform: scale(1);
+	overflow: hidden;
+	position: relative;
+}
+
+#main_section #activities .each_activity_active {
+	position: relative;
+	padding: 10px;
+}
+
+#main_section #activities .each_activity_active::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	height: 10px;
+	background: blue;
+}
+
+#main_section #activities .each_activity .each_activity_circle img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin: 10px 10px 0px 10px;
+}
+
+#main_section #activities .each_activity .each_activity_circle .click_check {
+
+}
+
+#main_section #activities .each_activity .each_activity_text{
+	text-align: center;
+}
+
+#main_section #activities .each_activity:hover {
+	cursor: pointer;
+}
+
+#main_section #activities .each_activity:hover .each_activity_text{
+	color: #2849D5;
+}
+
+
+
+
+
+
+
+
+
+#check_details_main {
+	width: 100%;
+	margin: 5px 0px auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#check_details_main div {
+	display: flex;
+	display: -webkit-flex;
+	position: relative;
+	margin: 5px  0px auto;
+	border:none;
+		background:#3E466B;
+
+}
+
+#check_details_main .check_detail button {
+	display: inline-block;
+	color:blue;
+	width: 49vw;
+	text-align: center;
+	padding: 7px;
+	border-left: none;
+
+		background:#3E466B;
+
+
+
+}
+
+
+#check_details_main .check_detail button:hover {
+
+	cursor: pointer;
+	color: white;
+
+}
