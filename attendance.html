@@ -64,21 +64,30 @@
 
 		<div id="main_section">
 			<div id="activities">
-				<div class="each_activity">
+				<div class="each_activity" onclick="tick(0)"  >
 					<div class="each_activity_circle">
-						<img src="images/baby1.jpeg">
+						<img id="bab0" src="images/baby1.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
 					</div>
 					<div class="each_activity_text">Asutosh</div>
 				</div>
-				<div class="each_activity">
+				<div class="each_activity" onclick="tick(1)">
 					<div class="each_activity_circle">
-						<img src="images/baby2.jpeg">
+						<img id="bab1" src="images/baby2.jpeg"  >
+					</div>
+					<div  class="tick">
+						<i class="fa fa-check"></i>
 					</div>
 					<div class="each_activity_text">Jakie</div>
 				</div>
-				<div class="each_activity">
+				<div class="each_activity"  onclick="tick(2)">
 					<div class="each_activity_circle">
-						<img src="images/baby3.jpeg">
+						<img id="bab2" src="images/baby3.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
 					</div>
 					<div class="each_activity_text">Sisam</div>
 				</div>
@@ -98,6 +107,50 @@
 
 		
 	</div>
+
+
+
+
+
+<script type="text/javascript">
+		function tick(e)
+	{
+		
+		counter++;
+		if(counter%2 === 0)
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'block';
+
+		  	 query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'grayscale(100%)';
+		  	
+
+		    
+		}
+		else
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'none';
+		  	  query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'none';
+
+		}
+		
+	}
+	function  firstfunction()
+
+	{
+		counter = 1;
+
+	}
+	window.addEventListener('load',firstfunction);
+		
+	</script>
 </body>
 </html>
 

@@ -78,6 +78,28 @@
 	background: #fb7367;
 }
 
+
+
+.tick
+{
+	position:relative;
+	top:-50px;
+	display: none;
+	height: 0px;
+}
+
+
+.tick i
+	{
+		font-size: 40px;
+		color: white;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+
+	}
+
 #navigation_bar ul#navigation_bar_ul {
 	list-style-type: none;
 	display: flex;
@@ -142,7 +164,7 @@
 
 #attendance_details_main div {
 	display: -webkit-flex;
-	border: .1px solid #39f;
+	border: none;
 	position: relative;
 	margin: 5px auto;
 }
