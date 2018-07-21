@@ -130,8 +130,8 @@
 }
 
 #main_section #activities .each_activity .each_activity_circle img{
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	margin: 10px 10px 0px 10px;
 }
