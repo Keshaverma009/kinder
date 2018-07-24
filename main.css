@@ -153,7 +153,8 @@ font-size: 206px;
 */
 #main_section #activities .each_activity .each_activity_text{
 	text-align: center;
-	font-size: 46px;
+	font-size: 40px;
+	width: 100%;
 }
 
 #main_section #activities .each_activity:hover {

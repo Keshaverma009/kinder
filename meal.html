@@ -59,12 +59,12 @@
 
 
 
-			<div id="time_main">
+			<div id="time_main" onclick="edit_time(1)">
 				<div style="font-size: 40px;font-weight: bold;margin:10px;">
 					Time: 
 				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
 
- 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time(1)"></span>
+ 					<span style="color:blue;display: inline-block;" class = "time"  ></span>
 
 					</div>
 				
@@ -81,7 +81,7 @@
 
 				<div id="food_detail">
 					<button class="btn" >Breakfast</button>
-					<button class="btn" >Launch</burron>
+					<button class="btn" >Lunch</burron>
 					<button class="btn" >Snack</button>
 					<button class="btn" >Dinner</button>
 				</div>
@@ -89,10 +89,11 @@
 				How much?
 			</div>
 				<div id="food_detail_two">
-					<button class="btn1" >All</button>
-					<button class="btn1" >Most</burron>
-					<button class="btn1" >Some</button>
-					<button class="btn1" >None</button>
+					<button class="btn1" >Ate Well</button>
+					<button class="btn1" >Didn't Eat Well</button>
+					<button style="display: none;" class="btn1" >Didn't Eat Well</button>
+					<button style="display: none;" class="btn1" >Didn't Eat Well</button>
+					
 				</div>
 			
 			</div>
@@ -113,14 +114,14 @@
 				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;">Notes</div>
 
 				<div>
-		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here"></textarea>
+		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:40px;" placeholder="Optional Type notes here"></textarea>
 				</div>
 			</div>
 		</div>
 
 		<div id="footer" onclick="location.href = 'index.html'" >
 			<div id="footer_text">
-				Create
+				Save
 			</div>
 		</div>
 

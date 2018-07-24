@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kinder | Meal</title>
+	<title>Kinder | Observation</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="food.css">
 <meta name="viewport" content="user-scalable=no" />
@@ -14,7 +14,7 @@
 				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
 			</div>
 			
-			<div>Food</div>
+			<div>Observation</div>
 
 			
 			
@@ -59,12 +59,12 @@
 
 
 
-			<div id="time_main">
+			<div id="time_main" onclick="edit_time(1)">
 				<div style="font-size: 40px;font-weight: bold;margin:10px;">
 					Time: 
 				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
 
- 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time(1)"></span>
+ 					<span style="color:blue;display: inline-block;" class = "time"  ></span>
 
 					</div>
 				
@@ -76,51 +76,32 @@
 
 			</div>
 
-			<div id="food_details_main">
 			
-
-				<div id="food_detail">
-					<button class="btn" >Breakfast</button>
-					<button class="btn" >Launch</burron>
-					<button class="btn" >Snack</button>
-					<button class="btn" >Dinner</button>
-				</div>
-				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;margin:10px;">
-				How much?
-			</div>
-				<div id="food_detail_two">
-					<button class="btn1" >All</button>
-					<button class="btn1" >Most</burron>
-					<button class="btn1" >Some</button>
-					<button class="btn1" >None</button>
-				</div>
-			
-			</div>
 
 			<div id="meal_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Meal Items</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Mile Stones</div>
 				<div>
 					<i style="color: #39f;" class="fa fa-plus"></i>
 				</div>
 			</div>
 
 			<div id="photo_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Photos</div>
+				<div style="font-weight: bold;font-size:40px;margin:10px;">Photos</div>
 				<div><i style="color: #39f" class="fa fa-camera"></i></div>
 			</div>
 
 			<div id="notes_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;">Notes</div>
+				<div style="font-weight: bold;font-size:40px;">Notes</div>
 
 				<div>
-		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here"></textarea>
+		<textarea style="width: 98%;border: none; outline: none;resize: none;font-size:35px;" placeholder="Optional Type notes here"></textarea>
 				</div>
 			</div>
 		</div>
 
 		<div id="footer" onclick="location.href = 'index.html'" >
 			<div id="footer_text">
-				Create
+				Save
 			</div>
 		</div>
 
