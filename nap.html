@@ -3,7 +3,9 @@
 <head>
 	<title>Kinder | Nap</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="nap.css">
+	<link rel="stylesheet" href="food.css">
+<meta name="viewport" content="user-scalable=no" />
+
 </head>
 <body>
 	<div id="wrapper">
@@ -19,82 +21,181 @@
 		</div>
 
 		<div id="main_section">
-			<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;">
-				Students
+			<div style="font-weight: bold;padding-left: 15px;padding-bottom: 15px;font-size: 40px;margin:10px;">
+				Tag Students
 			</div>
-			<div id="student_main">
-				<div>
-					<img style="width: 50px;height: 50px;border-radius: 50%;padding: 2px;" src="images/baby1.jpeg">
+			<div id="main_section">
+			<div id="activities">
+				<div class="each_activity" onclick="tick(0)"  >
+					<div class="each_activity_circle">
+						<img id="bab0" src="images/baby1.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Asutosh</div>
+				</div>
+				<div class="each_activity" onclick="tick(1)">
+					<div class="each_activity_circle">
+						<img id="bab1" src="images/baby2.jpeg"  >
+					</div>
+					<div  class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Jakie</div>
+				</div>
+				<div class="each_activity"  onclick="tick(2)">
+					<div class="each_activity_circle">
+						<img id="bab2" src="images/baby3.jpeg" >
+					</div>
+					<div class="tick">
+						<i class="fa fa-check"></i>
+					</div>
+					<div class="each_activity_text">Sisam</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-					<img style="width: 50px;height: 50px;border-radius: 50%;padding: 2px" src="images/baby2.jpeg">
-					<img style="width: 50px;height: 50px;border-radius: 50%;padding: 2px" src="images/baby3.jpeg">
-				</div>
-				<div>
-					<i class="fa fa-pencil"></i>
-				</div>
-			</div>
 
 
 			<div id="time_main">
-				<div style="font-size: 14px;font-weight: bold;">Time: <span style="color:blue;" id = "time"></span></div>
+				<div style="font-size: 40px;font-weight: bold;margin:10px;">
+					Start Time: 
+				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
+
+ 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time(1)"></span>
+
+					</div>
+				
 				<div>
 					<i class="fa fa-pencil"></i>
 				</div>
 
-			</div>
-
-			<div id="food_details_main">
-				<div class="food_detail">
-					<button  style="background: blue;color:white;" >Start Nap</button>
-					<button >End Nap</button>
+			</div>	
+			<div id="time_main">
+				<div style="font-size: 40px;font-weight: bold;margin:10px;">
+					End Time&nbsp;&nbsp;:
+					<input  id="end_time" type="time" name="end_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="15:00:00"> 
+						<span style="color:blue;display: inline-block;" class = "time"  onclick='edit_time(2)'></span>
 				</div>
 				
-			</div>
-
+				<div>
+					<i class="fa fa-pencil"></i>
+				</div>
+<!-- </div>
+ -->			</div>
+<!-- 			</div>
+ -->			<!-- <div id="food_details_main">
 			
 
+			
+				
+			
+			</div>
+
+			 -->
+
 			<div id="photo_main">
-				<div style="font-size: 14px;font-weight: bold;">Photos</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Photos</div>
 				<div><i style="color: #39f" class="fa fa-camera"></i></div>
 			</div>
 
 			<div id="notes_main">
-				<div style="font-size: 14px;font-weight: bold;">Notes</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px">Notes</div>
 
 				<div>
-					<textarea style="width: 100%;border: none; outline: none;resize: none" placeholder="Type notes..."></textarea>
+		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here"></textarea>
 				</div>
 			</div>
 		</div>
 
-		<div id="footer" onclick="location.href = 'index.html'">
+		<div id="footer" onclick="location.href = 'index.html'" >
 			<div id="footer_text">
 				Create
 			</div>
 		</div>
 
 		<script type="text/javascript">
-			function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-}
 
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  // add a zero in front of numbers<10
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-  t = setTimeout(function() {
-    startTime()
-  }, 500);
-}
-startTime();
+
+
+
+
+			function checkTime(i) {
+					  if (i < 10) {
+					    i = "0" + i;
+					  }
+					  return i;
+					}
+
+					function startTime() {
+					  var today = new Date();
+					  var h = today.getHours();
+					  var m = today.getMinutes();
+					  // add a zero in front of numbers<10
+					  m = checkTime(m);
+					  document.getElementsByClassName('time')[0].innerHTML = h + ":" + m ;
+					  document.getElementsByClassName('time')[1].innerHTML = h + ":" + m ;
+					  t = setTimeout(function() {
+					    startTime()
+					  }, 500);
+					}
+					startTime();
+
+
+
+
+function tick(e)
+	{
+		
+		counter++;
+		if(counter%2 === 0)
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'block';
+
+		  	 query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'grayscale(100%)';
+		  	
+
+		    
+		}
+		else
+		{
+			var items = document.getElementsByClassName('tick');
+		     len = items.length;
+		  	 items[e].style.display = 'none';
+		  	  query = 'bab'+e;
+		  	 x = document.getElementById(query);
+		  	 x.style.filter = 'none';
+
+		}
+		
+	}
+	function  firstfunction()
+
+	{
+		counter = 1;
+
+	}
+	window.addEventListener('load',firstfunction);
+			
+
+			function edit_time(number){
+				if(number ==1){
+				document.getElementById('start_time').style.display='inline-block';
+				document.getElementsByClassName('time')[0].style.display='none'
+				}
+				else{
+					document.getElementById('end_time').style.display='inline-block';
+					document.getElementsByClassName('time')[1].style.display='none'
+
+
+				}
+			}
 		</script>
 </body>
 </html>

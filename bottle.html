@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kinder | Meal</title>
+	<title>Kinder | Bottle</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="food.css">
 <meta name="viewport" content="user-scalable=no" />
@@ -14,7 +14,7 @@
 				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
 			</div>
 			
-			<div>Incident</div>
+			<div>Bottle</div>
 
 			
 			
@@ -60,9 +60,9 @@
 
 
 			<div id="time_main">
-				<div style="font-size: 40px;font-weight: bold;margin:10px;">
-					Time:
-					 <input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
+				<div style="font-size: 40px;font-weight: bold;">
+					Time: 
+					<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
 
  					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time()"></span>
 
@@ -73,48 +73,31 @@
 
 			</div>
 
-			<!-- <div id="food_details_main">
+			<div id="food_details_main">
 			
-
-				<div id="food_detail">
-					<button class="btn active" >Breakfast</button>
-					<button class="btn" >Launch</burron>
-					<button class="btn" >Snack</button>
-					<button class="btn" >Dinner</button>
+					
+				<div id="food_detail" style="margin-bottom: 10px;margin-top: 10px;">
+					<select style="font-size: 60px ;width:400px;margin-left: 15%;">
+						<option>4</option>
+						<option>8</option>
+						<option>12</option>
+						<option>16</option>
+					</select>
+					<button   style="background-color: blue; color: white;font-size: 50px;padding:30px;">Ounces</burron>
+					
 				</div>
-				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;">
-				How much?
-			</div>
-				<div id="food_detail">
-					<button class="btn active" >All</button>
-					<button class="btn" >Most</burron>
-					<button class="btn" >Some</button>
-					<button class="btn" >None</button>
-				</div>
+			
 			
 			</div>
 
-			<div id="meal_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;">Meal Items</div>
-				<div>
-					<i style="color: #39f;" class="fa fa-plus"></i>
-				</div>
-			</div>
- -->
+			
 			<div id="photo_main">
-				<div style="font-weight: bold;font-size:40px;margin:10px;">Photos</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px">Photos</div>
 				<div><i style="color: #39f" class="fa fa-camera"></i></div>
 			</div>
 
-			<div id="notes_title">
-				<div style="font-weight: bold;font-size:40px;margin:20px;">Title</div>
-
-				<div>
-					<input  type="text" name="title" placeholder="Title . . . " style="width: 100%;border: none;height:80px; resize: none;font-size:46px;margin:10px;">
-				</div>
-
 			<div id="notes_main">
-				<div style="font-weight: bold;font-size:40px;margin:10px;">Notes</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px">Notes</div>
 
 				<div>
 		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here"></textarea>
@@ -134,8 +117,6 @@
 
 
 
-
-
 			function checkTime(i) {
 					  if (i < 10) {
 					    i = "0" + i;
@@ -143,7 +124,7 @@
 					  return i;
 					}
 
-			function startTime() {
+					function startTime() {
 					  var today = new Date();
 					  var h = today.getHours();
 					  var m = today.getMinutes();
@@ -155,7 +136,6 @@
 					    startTime()
 					  }, 500);
 					}
-					
 					
 
 
@@ -195,17 +175,18 @@ function tick(e)
 	{
 		counter = 1;
 		startTime();
-
 	}
+	
+			
 
-	function edit_time(){
+			function edit_time(){
 				
 				document.getElementById('start_time').style.display='inline-block';
 				document.getElementsByClassName('time')[0].style.display='none';
 				
 			}
-	window.addEventListener('load',firstfunction);
-		
+
+			window.addEventListener('load',firstfunction);
 		</script>
 </body>
-</html>	
+</html>

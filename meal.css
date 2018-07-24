@@ -16,36 +16,15 @@
   	display: inline-block;
 	color:blue;
 	width: 49vw;
-	font-size: 40px;
 	text-align: center;
-	padding: 10px;
+	padding: 6px;
 	background-color: white;
 	border: .1px solid #39f;
-	margin-bottom: 20px;
-	margin-top: 20px;
 
 }
-
-
-
-.btn1 {
-
-  	display: inline-block;
-	color:blue;
-	width: 49vw;
-	font-size: 40px;
-	text-align: center;
-	padding: 10px;
-	background-color: white;
-	border: .1px solid #39f;
-	margin-bottom: 20px;
-	margin-top: 20px;
-
-}
-
 
 /* Style the active class (and buttons on mouse-over) */
-.active {
+.active, .btn:hover {
   background-color: blue;
   color: white;
   cursor: pointer;
@@ -56,32 +35,17 @@
 	display: -webkit-flex;
 	background: #2879D5;
 	color: #fff;
-	padding: 35px;
+	padding: 15px;
 }
 
 #wrapper #header div:nth-child(1) { 
 	text-align: left; 
 	flex: .5;
-
-}#wrapper #header div button i { 
-		font-size: 46px;
-
-
-
 }
 #wrapper #header div:nth-child(2) { 
 	text-align: left; 
 	flex: 8;
-	font-size: 55px;
-	align-self: center;
-	margin-left: 20px;
-
-}
-
-#wrapper #header div:nth-child(3) { 
-	text-align: left; 
-	flex: 1o;
-	font-size: 55px;
+	font-size: 26px;
 	align-self: center;
 	margin-left: 20px;
 
@@ -97,104 +61,9 @@
 	font-size: 20px;
 }
 
-
-
-
-.tick
-{
-	position:relative;
-	top:-200px;
-	display: none;
-	height: 0px;
-}
-
-
-.tick i
-	{
-		font-size: 200px;
-		color: white;
-		-webkit-user-select: none; /* Safari */        
-		-moz-user-select: none; /* Firefox */
-		-ms-user-select: none; /* IE10+/Edge */
-		user-select: none; /* Standard */
-
-	}
-
-
 #main_section {
 	padding-top: 30px;
-	display: inline-block;
 }
-
-#main_section #activities {
-	width: 100%;
-}
-
-#main_section #activities .each_activity {
-	width: 33.33333%;
-	float: left;
-	text-align: center;
-	padding: 5px;
-	border-radius: 50%;
-	overflow: hidden;
-	position: relative;
-}
-
-#main_section #activities .each_activity_active {
-	position: relative;
-	padding: 10px;
-}
-
-#main_section #activities .each_activity_active::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100px;
-	height: 10px;
-	background: blue;
-}
-
-#main_section #activities .each_activity .each_activity_circle img{
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	margin: 10px 10px 0px 10px;
-}
-
-#main_section #activities .each_activity .each_activity_circle .click_check {
-
-}
-
-#main_section #activities .each_activity .each_activity_text{
-	text-align: center;
-	font-size: 30px;
-}
-
-#main_section #activities .each_activity:hover {
-	cursor: pointer;
-}
-
-#main_section #activities .each_activity:hover .each_activity_text{
-	color: #2849D5;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #footer {
@@ -203,7 +72,7 @@
 	left: 0;
 	background: #2879D5;
 	width: 100%;
-	padding: 35px;
+	padding: 20px;
 
 }
 
@@ -212,13 +81,14 @@
 
 	background: #247957;
 	width: 100%;
+	padding: 20px;
 	cursor: pointer;
 }
 
 
 #footer #footer_text {
 	text-align: center;
-	font-size: 50px;
+	font-size: 25px;
 	color:white;
 }
 
@@ -236,13 +106,10 @@
 }
 
 #student_main div:nth-child(2) {
-	flex: .9;
+	flex: 1;
 	text-align: right;
 	padding: 5px;
 	align-self: center;
-	font-size: 35px;
-		margin-right: 20px;
-
 }
 .fa fa-pencil:hover{
 	cursor: pointer;
@@ -267,13 +134,10 @@
 }
 
 #time_main div:nth-child(2) {
-	flex: .9;
+	flex: 1;
 	text-align: right;
 	padding: 5px;
-	font-size: 35px;
 	align-self: center;
-		margin-right: 20px;
-
 }
 
 #meal_main {
@@ -287,18 +151,14 @@
 	flex: 1;
 	text-align: left;
 	padding: 5px;
-	padding-right: 20px;
 	align-self: center;
 }
 
 #meal_main div:nth-child(2) {
-	flex: .9;
+	flex: 1;
 	text-align: right;
 	padding: 5px;
 	align-self: center;
-	font-size:35px;
-		margin-right: 20px;
-
 }
 
 #photo_main {
@@ -316,12 +176,10 @@
 }
 
 #photo_main div:nth-child(2) {
-	flex: .9;
+	flex: 1;
 	text-align: right;
 	padding: 5px;
 	align-self: center;
-	font-size:35px;
-	margin-right: 20px;
 }
 
 #notes_main {
@@ -330,24 +188,19 @@
 }
 
 #notes_main div {
-	padding: 15px;
+	padding: 5px;
 }
 
 #food_details_main {
 	width: 98%;
 	margin: 5px auto;
-		border-bottom: 1px solid #e1e1e1;
-
 }
-/*#food_detail{
-	margin-bottom: 200px;
-}*/
 
 #food_details_main div {
 	display: flex;
 	display: -webkit-flex;
-/*	border: .1px solid #39f;
-*/	position: relative;
+	border: .1px solid #39f;
+	position: relative;
 	margin: 5px auto;
 }
 
@@ -394,52 +247,4 @@ cursor: pointer;
 	background: blue;
 	color: white;
 
-}
-
-#photos img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-}
-
-#photos {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;  
-}
-
-
-@media (max-width: 1200px) {
-  #photos {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
-  }
-}
-@media (max-width: 1000px) {
-  #photos {
-  -moz-column-count:    3;
-  -webkit-column-count: 3;
-  column-count:         3;
-  }
-}
-@media (max-width: 800px) {
-  #photos {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 400px) {
-  #photos {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
 }

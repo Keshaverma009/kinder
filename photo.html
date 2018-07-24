@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kinder | Notes</title>
+	<title>Kinder | Photo</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="food.css">
 <meta name="viewport" content="user-scalable=no" />
@@ -14,91 +14,47 @@
 				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
 			</div>
 			
-			<div>Notes</div>
+			<div>Photos</div>
 
-			
+			<div>
+				<input type="text" name="notes" id="notes" style="display: none;">
+				<label for="notes">Aa</label>
+
+			</div>
 			
 		</div>
 
-		<div id="main_section">
-			<div style="font-weight: bold;padding-left: 15px;padding-bottom: 15px;font-size: 40px;margin:10px;">
-				Tag Students
-			</div>
-			<div id="main_section">
-			<div id="activities">
-				<div class="each_activity" onclick="tick(0)"  >
-					<div class="each_activity_circle">
-						<img id="bab0" src="images/baby1.jpeg" >
-					</div>
-					<div class="tick">
-						<i class="fa fa-check"></i>
-					</div>
-					<div class="each_activity_text">Asutosh</div>
-				</div>
-				<div class="each_activity" onclick="tick(1)">
-					<div class="each_activity_circle">
-						<img id="bab1" src="images/baby2.jpeg"  >
-					</div>
-					<div  class="tick">
-						<i class="fa fa-check"></i>
-					</div>
-					<div class="each_activity_text">Jakie</div>
-				</div>
-				<div class="each_activity"  onclick="tick(2)">
-					<div class="each_activity_circle">
-						<img id="bab2" src="images/baby3.jpeg" >
-					</div>
-					<div class="tick">
-						<i class="fa fa-check"></i>
-					</div>
-					<div class="each_activity_text">Sisam</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		
 
-
-
-			<!-- <div id="time_main">
-				<div style="font-size: 40px;font-weight: bold;margin:10px;">
-					Time: 
-				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
-
- 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time(1)"></span>
-
-					</div>
-				
-				<div>
-					<i class="fa fa-pencil"></i>
-				</div>
-
-			</div> -->	
-
-			</div>
-
-			<div id="food_details_main">
 			
 
-				<div id="food_detail">
-					<button class="btn" onclick="location.href='notes.html'" >Private</button>
-					<button class="btn" onclick="location.href='pnotes.html'"  >Public</burron>
-					
-				</div>
-				
 			</div>
+			<section id="photos">
+					  <img src="https://www.workingmother.com/sites/workingmother.com/files/styles/1000_1x_/public/images/2017/04/single-mom-hugging-kids_0.jpg?itok=mOrxyxHJ&fc=50,50" alt="cat">
 
-			<div id="photo_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Photos</div>
-				<div><i style="color: #39f" class="fa fa-camera"></i></div>
-			</div>
+					  
+					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6sJ_3UVnFdgUaZIW-gLlS22Hi-kJyZNd92b-qZl8iLZrtE4Ev" alt="cat">
+					  <img src="http://2.bp.blogspot.com/_eAPkYd-VWQA/SxJ-vjevF8I/AAAAAAAAAEU/0w_AZDujmmY/s1600/Kids+Wallpapers+0103.jpg" alt="cat">
+					  <img src="https://images.pcworld.com/news/graphics/202326-04_facebook_kids_original.jpg" alt="cat">
 
+
+
+					  <img src="https://www.wikihow.com/images/thumb/4/43/Make-a-Paper-Chef-Hat-for-Kids-Step-1-Version-2.jpg/aid6201944-v4-728px-Make-a-Paper-Chef-Hat-for-Kids-Step-1-Version-2.jpg" alt="cat">
+
+					  <img src="https://redtricom.files.wordpress.com/2017/08/jose-ibarra-297117-unsplash.jpg?w=1024&h=683" alt="cat">
+					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsx6GzO3eqdsI82DAby3_EV_cRUQOD-Ke89blk6Em0feBYlSp1jA" alt="cat">
+					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZA1mWZKhpzYLFshLvS_dV8O1LzLBWmdvN6Ad_BM2H5q2iz0kdVg" alt="cat">
+					  <img src="http://www.apa.org/Images/kids-media-food-title-image_tcm7-188772.jpg" alt="cat">
+					  
+					</section>
+			<!-- 
 			<div id="notes_main">
 				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;">Notes</div>
 
-				<div>
-		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;"  rows="5" placeholder="Optional Type notes here"></textarea>
-				</div>
-			</div>
+			<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here">
+				
+			</textarea>
+				</div> -->
 		</div>
 
 		<div id="footer" onclick="location.href = 'index.html'" >
@@ -114,6 +70,19 @@
 		<script type="text/javascript">
 
 
+
+			function getRandomSize(min, max) {
+					  return Math.round(Math.random() * (max - min) + min);
+					}
+
+					for (var i = 0; i < 25; i++) {
+					  var width = getRandomSize(200, 400);
+					  var height =  getRandomSize(200, 400);
+					  $('#photos').append('<img src="//www.lorempixel.com/'+width+'/'+height+'/cats" alt="pretty kitty">');
+					}
+
+
+
 			var button1 = document.getElementsByClassName('btn');
 			for(i = 0; i < button1.length;i++) {
 
@@ -127,7 +96,19 @@
 				});
 			}
 
-			
+			var button2 = document.getElementsByClassName('btn1');
+			for(i = 0; i < button1.length;i++) {
+				button2[i].addEventListener('click', function() {
+
+					var elements = document.getElementsByClassName('btn1');
+					for(j = 0; j < elements.length;j++)
+						elements[j].classList.remove('active')
+
+					this.classList.add('active');
+				});
+			}
+
+
 
 
 

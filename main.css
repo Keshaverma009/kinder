@@ -3,6 +3,7 @@
 	padding: 0;
 	font-family: "sans-serif";
 	box-sizing: border-box;
+	/*display: -webkit-inline-box;*/
 }
 
 #wrapper {
@@ -21,6 +22,7 @@
 #main_header #menu {
 	flex: 4;
 	padding: 4px;
+
 	padding-top: 10px;
 }
 
@@ -29,7 +31,7 @@
 	border: none;
 	outline: none;
 	color: #fff;
-	font-size: 26px;
+	font-size: 76px;
 	cursor: pointer;
 }
 
@@ -37,10 +39,12 @@
 	flex: 3;
 	padding-top: 12px;
 	padding-right: 10px;
-}
+	line-height: 30px;
+	}
 
 #main_header #class_selection select {
 	padding: 6px;
+	font-size: 36px;
 	outline: none;
 	border: none;
 	background-color: #40c6ed;
@@ -51,6 +55,7 @@
 #main_header  #add_students {
 	flex: 6;
 	text-align: right;
+
 }
 
 #main_header #add_students button[type="button"] {
@@ -63,13 +68,15 @@
 	border-radius: 5px;
 	margin-top: 10px;
 	cursor: pointer;
-}
+	font-size: 35px;
+/*	height: 20px;
+*/}
 
 #main_header #settings {
 	flex: 2;
 	text-align: right;
 	padding-top: 10px;
-	font-size: 30px;
+	font-size: 76px;
 	cursor: pointer;
 }
 
@@ -93,9 +100,12 @@
 	color: white;
 	text-decoration: none;
 	display: block;
-	padding: 6px;
+	padding: 16px;
 	position: relative;
-}
+	font-size: 290%;
+
+/*	font-size: 60px;
+*/}
 
 #navigation_bar ul#navigation_bar_ul li:nth-child(4){
 	text-align: right;
@@ -125,26 +135,31 @@
 	text-align: center;
 	padding: 5px;
 	border-radius: 50%;
-	transform: scale(1);
-	transition: all 0.2s;
+	/*transform: scale(1);
+	transition: all 0.2s;*/
 }
 
 #main_section #activities .each_activity .each_activity_circle img{
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 30%;
 	margin: 10px 10px 0px 10px;
+/*	background-color: #91bbd1
+*/}
+/*
+#main_section #activities .each_activity .each_activity_circle i{
+font-size: 206px;
 }
-
-
+*/
 #main_section #activities .each_activity .each_activity_text{
 	text-align: center;
+	font-size: 46px;
 }
 
 #main_section #activities .each_activity:hover {
 	cursor: pointer;
-	transform: scale(1.2);
-}
+/*	transform: scale(1.2);
+*/}
 
 #main_section #activities .each_activity:hover .each_activity_text{
 	color: #444;

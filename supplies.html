@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kinder | Meal</title>
+	<title>Kinder | Supplies</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="food.css">
 <meta name="viewport" content="user-scalable=no" />
@@ -14,14 +14,14 @@
 				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
 			</div>
 			
-			<div>Incident</div>
+			<div>Supplies</div>
 
 			
 			
 		</div>
 
 		<div id="main_section">
-			<div style="font-weight: bold;padding-left: 15px;padding-bottom: 15px;font-size: 40px;">
+			<div style="font-weight: bold;padding-left: 15px;padding-bottom: 15px;font-size: 40px;margin:10px;">
 				Tag Students
 			</div>
 			<div id="main_section">
@@ -59,62 +59,34 @@
 
 
 
-			<div id="time_main">
-				<div style="font-size: 40px;font-weight: bold;margin:10px;">
-					Time:
-					 <input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
-
- 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time()"></span>
-
-				</div>
-				<div>
-					<i class="fa fa-pencil"></i>
-				</div>
-
-			</div>
-
-			<!-- <div id="food_details_main">
 			
+			</div>
 
-				<div id="food_detail">
-					<button class="btn active" >Breakfast</button>
-					<button class="btn" >Launch</burron>
-					<button class="btn" >Snack</button>
-					<button class="btn" >Dinner</button>
-				</div>
-				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;">
-				How much?
+			<div id="food_details_main">
+			
+				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;margin:10px;">
+				Please bring more?
 			</div>
 				<div id="food_detail">
-					<button class="btn active" >All</button>
-					<button class="btn" >Most</burron>
-					<button class="btn" >Some</button>
-					<button class="btn" >None</button>
+
+					<button class="btn" >Diapers</button>
+					<button class="btn" >Wipes</burron>
+					<button class="btn" >Clothes</button>
+					<button class="btn" >Food</button>
+				</div>
+			
+				<div id="food_detail_two" style="display: none;">
+					<button class="btn1" >All</button>
+					<button class="btn1" >Most</burron>
+					<button class="btn1" >Some</button>
+					<button class="btn1" >None</button>
 				</div>
 			
 			</div>
 
-			<div id="meal_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;">Meal Items</div>
-				<div>
-					<i style="color: #39f;" class="fa fa-plus"></i>
-				</div>
-			</div>
- -->
-			<div id="photo_main">
-				<div style="font-weight: bold;font-size:40px;margin:10px;">Photos</div>
-				<div><i style="color: #39f" class="fa fa-camera"></i></div>
-			</div>
-
-			<div id="notes_title">
-				<div style="font-weight: bold;font-size:40px;margin:20px;">Title</div>
-
-				<div>
-					<input  type="text" name="title" placeholder="Title . . . " style="width: 100%;border: none;height:80px; resize: none;font-size:46px;margin:10px;">
-				</div>
 
 			<div id="notes_main">
-				<div style="font-weight: bold;font-size:40px;margin:10px;">Notes</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;">Notes</div>
 
 				<div>
 		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;" placeholder="Optional Type notes here"></textarea>
@@ -128,8 +100,34 @@
 			</div>
 		</div>
 
+
+
+
+
 		<script type="text/javascript">
 
+
+			var button1 = document.getElementsByClassName('btn');
+			for(i = 0; i < button1.length;i++) {
+
+				button1[i].addEventListener('click', function() {
+					// give the class another one
+
+					this.classList.toggle('active');
+				});
+			}
+
+			var button2 = document.getElementsByClassName('btn1');
+			for(i = 0; i < button1.length;i++) {
+				button2[i].addEventListener('click', function() {
+
+					var elements = document.getElementsByClassName('btn1');
+					for(j = 0; j < elements.length;j++)
+						elements[j].classList.remove('active')
+
+					this.classList.add('active');
+				});
+			}
 
 
 
@@ -144,18 +142,17 @@
 					}
 
 			function startTime() {
-					  var today = new Date();
-					  var h = today.getHours();
-					  var m = today.getMinutes();
-					  // add a zero in front of numbers<10
-					  m = checkTime(m);
-					  document.getElementsByClassName('time')[0].innerHTML = h + ":" + m ;
-					  document.getElementsByClassName('time')[1].innerHTML = h + ":" + m ;
-					  t = setTimeout(function() {
-					    startTime()
-					  }, 500);
-					}
-					
+				  var today = new Date();
+				  var h = today.getHours();
+				  var m = today.getMinutes();
+				  // add a zero in front of numbers<10
+				  m = checkTime(m);
+				  document.getElementsByClassName('time')[0].innerHTML = h + ":" + m ;
+				  document.getElementsByClassName('time')[1].innerHTML = h + ":" + m ;
+				  t = setTimeout(function() {
+				    startTime()
+				  }, 500);
+			}
 					
 
 
@@ -190,22 +187,30 @@ function tick(e)
 		}
 		
 	}
-	function  firstfunction()
+	
+	
+			
 
-	{
-		counter = 1;
-		startTime();
-
-	}
-
-	function edit_time(){
-				
+			function edit_time(number){
+				if(number ==1){
 				document.getElementById('start_time').style.display='inline-block';
-				document.getElementsByClassName('time')[0].style.display='none';
-				
+				document.getElementsByClassName('time')[0].style.display='none'
+				}
+				else{
+					document.getElementById('end_time').style.display='inline-block';
+					document.getElementsByClassName('time')[1].style.display='none'
+
+
+				}
 			}
-	window.addEventListener('load',firstfunction);
-		
+
+			function  firstfunction()
+
+			{
+				counter = 1;
+				startTime();
+			}
+			window.addEventListener('load',firstfunction());
 		</script>
 </body>
-</html>	
+</html>

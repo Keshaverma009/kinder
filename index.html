@@ -4,6 +4,71 @@
 	<title>Kinder</title>
 	<link rel="stylesheet" href="main.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="user-scalable=no" />
+
+
+<style type="text/css">
+	
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 400px;
+    padding: 20px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.modal-content div i{
+	font-size: 60px;
+	padding: 20px;
+	align-self: center;
+	text-align: left;
+}
+.modal-content div {
+	font-size: 60px;
+	padding: 20px;
+	align-self: center;
+	text-align: left;
+	border-bottom:1px solid #40c6ed;
+}
+.modal-content div:hover{
+	    background-color:#40c6ed;
+	    color: white;
+
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 68px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
 </head>
 <body>
 	<div id="wrapper">
@@ -39,11 +104,12 @@
 					<li>
 						<a href="javascript:void(0)">Students</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="attendance.html">Attendence</a>
-					</li>
+					</li> -->
 					<li>
-						<a href="javascript:void(0)">Messages</a>
+						<a href="javascript:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i>
+Messages</a>
 					</li>
 				</ul>
 			</div>
@@ -51,57 +117,132 @@
 
 		<div id="main_section">
 			<div id="activities">
-				<div class="each_activity">
-					<div class="each_activity_circle">
-						<img src="images/camera.png">
+				<div class="each_activity"  onclick="location.href='photo.html'" >
+<!-- 				<div class="each_activity" id='myBtn' onclick="location.href='photo.html'" >
+ -->					<div class="each_activity_circle">
+						<img src="images/photo.svg">
 					</div>
 					<div class="each_activity_text">photos</div>
 				</div>
+
+					<!-- The Modal -->
+<!-- 					<div id="myModal" class="modal">
+ -->
+					  <!-- Modal content -->
+					  <!-- <div class="modal-content">
+					    <span class="close">&times;</span>
+
+					    	<div >
+						    	<i class="fa fa-camera"></i>
+						    	<input type="file"  accept="image/*" capture="camera" name="picture" id="picture" style="display: none;" />
+								<label for="picture">Take photo</label>					 
+					    	</div>
+
+					    	<div>
+					    		<i class="fa fa-file-image-o" aria-hidden="true"></i>
+					    		<input type="file" name="gallery"  id="gallery" style="display: none;" > 
+					    		<label for="gallery">Choose Image</label>
+					    	</div>
+					  </div>
+
+					</div> -->
+
+
 				<div class="each_activity">
 					<div class="each_activity_circle">
-						<img src="images/video.png">
+						<img src="images/video.svg">
 					</div>
 					<div class="each_activity_text">Video</div>
 				</div>
-				<div class="each_activity" onclick ="alert('under development')">
+
+
+				<div class="each_activity" onclick ="location.href = 'supplies.html'">
 					<div class="each_activity_circle">
-						<img src="images/observation.png">
+						<img src="images/supply.svg">
 					</div>
-					<div class="each_activity_text">Observation</div>
+					<div class="each_activity_text">Supplies</div>
 				</div>
-				<div class="each_activity" onclick="location.href = 'selectfood.html'">
+
+
+				<div class="each_activity" onclick="location.href = 'meal.html'">
 					<div class="each_activity_circle">
-						<img src="images/food.png">
+						<img src="images/food.svg">
 					</div>
-					<div class="each_activity_text">Food</div>
-				</div>
-				<div class="each_activity" onclick="location.href = 'selectnap.html'">
+					<div class="each_activity_text">Meal</div>
+				</div>	
+
+
+				<div class="each_activity" onclick="location.href = 'bottle.html'">
 					<div class="each_activity_circle">
-						<img src="images/nap.png">
+						<img src="images/bottle.svg">
+					</div>
+					<div class="each_activity_text">Bottle</div>
+				</div>
+
+
+
+
+				<div class="each_activity" onclick="location.href = 'nap.html'">
+					<div class="each_activity_circle">
+						<img src="images/nap.svg">
 					</div>
 					<div class="each_activity_text">Nap</div>
 				</div>
-				<div class="each_activity"  onclick="location.href = 'selectpotty.html'">
+
+
+
+
+				<div class="each_activity"  onclick="location.href = 'potty.html'">
 					<div class="each_activity_circle">
-						<img src="images/potty.png">
+						<img src="images/potty.svg">
 					</div>
 					<div class="each_activity_text">Potty</div>
 				</div>
-				<div class="each_activity" onclick="location.href = 'selectnotes.html'">
+
+				
+
+
+				<div class="each_activity"  onclick="location.href = 'diaper.html'">
 					<div class="each_activity_circle">
-						<img src="images/noote.png">
+						<img src="images/diaper.svg">
+					</div>
+					<div class="each_activity_text">Diaper</div>
+				</div>
+
+
+
+
+				<div class="each_activity" onclick="location.href = 'notes.html'">
+					<div class="each_activity_circle">
+						<img src="images/note.svg">
 					</div>
 					<div class="each_activity_text">Note</div>
 				</div>
+
+
+
 				<div class="each_activity" onclick="location.href = 'incident.html'">
 					<div class="each_activity_circle">
-						<img src="images/incident.png">
+						<img src="images/incident.svg">
 					</div>
 					<div class="each_activity_text">Incident</div>
 				</div>
+
+
+
+				<div class="each_activity" onclick="location.href = 'emergency.html'">
+					<div class="each_activity_circle">
+						<img src="images/emergency.svg">
+					</div>
+					<div class="each_activity_text">Emergency</div>
+				</div>
+
+
+
+
 				<div class="each_activity">
 					<div class="each_activity_circle">
-						<img src="images/medine.png">
+						<img src="images/medicine.svg">
 					</div>
 					<div class="each_activity_text">Meds</div>
 				</div>
@@ -110,5 +251,36 @@
 			</div>
 		</div>
 	</div>
+
+
+	<script type="text/javascript">
+		
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	</script>
 </body>
 </html>

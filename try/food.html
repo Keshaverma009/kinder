@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kinder | Kinder</title>
+<link rel="stylesheet" type="text/css" href="food.css"></head>
+<body>
+	
+		
+
+		
+				<div id="food_detail">
+					<button class="btn active" >All</button>
+					<button class="btn" >Most</burron>
+					<button class="btn" >Some</button>
+					<button class="btn" >None</button>
+				</div>
+			
+
+
+
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("food_detail");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
