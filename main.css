@@ -133,7 +133,7 @@
 	width: 25%;
 	float: left;
 	text-align: center;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 50%;
 	/*transform: scale(1);
 	transition: all 0.2s;*/
@@ -142,7 +142,7 @@
 #main_section #activities .each_activity .each_activity_circle img{
 	width: 200px;
 	height: 200px;
-	border-radius: 30%;
+	border-radius: 50%;
 	margin: 10px 10px 0px 10px;
 /*	background-color: #91bbd1
 */}
