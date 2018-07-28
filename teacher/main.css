@@ -6,82 +6,9 @@
 	/*display: -webkit-inline-box;*/
 }
 
-#wrapper {
-
-}
-
-#main_header {
-	background: #40c6ed;
-	color: #fff;
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: row;
-	padding: 10px;
-}
-
-#main_header #menu {
-	flex: 4;
-	padding: 4px;
-
-	padding-top: 10px;
-}
-
-#main_header #menu button[type="button"] {
-	background-color: #40c6ed;
-	border: none;
-	outline: none;
-	color: #fff;
-	font-size: 76px;
-	cursor: pointer;
-}
-
-#main_header #class_selection {
-	flex: 3;
-	padding-top: 12px;
-	padding-right: 10px;
-	line-height: 30px;
-	}
-
-#main_header #class_selection select {
-	padding: 6px;
-	font-size: 36px;
-	outline: none;
-	border: none;
-	background-color: #40c6ed;
-	color: white;
-	cursor: pointer;
-}
-
-#main_header  #add_students {
-	flex: 6;
-	text-align: right;
-
-}
-
-#main_header #add_students button[type="button"] {
-	border: none;
-	outline: none;
-	background-color: #38aed1;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-	color: white;
-	padding: 8px;
-	border-radius: 5px;
-	margin-top: 10px;
-	cursor: pointer;
-	font-size: 35px;
-/*	height: 20px;
-*/}
-
-#main_header #settings {
-	flex: 2;
-	text-align: right;
-	padding-top: 10px;
-	font-size: 76px;
-	cursor: pointer;
-}
 
 #navigation_bar {
-	background: #40c6ed;
+	background: #4FA06A;
 	height: 120px;
 }
 
@@ -101,12 +28,15 @@
 	color: white;
 	text-decoration: none;
 	display: block;
-	padding: 33px;
+	padding: 29px;
 	position: relative;
-	font-size: 290%;
+	font-size: 55px;
 
-/*	font-size: 60px;
-*/}
+}
+
+
+
+
 
 #navigation_bar ul#navigation_bar_ul li:nth-child(4){
 	text-align: right;
@@ -116,8 +46,8 @@
 	content: '';
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	height: 19px;
+	left: 15px;
+	height: 15px;
 	width: 89%;
 	background-color: yellow;
 }
@@ -135,6 +65,7 @@
 	float: left;
 	text-align: center;
 	padding: 10px;
+	padding-bottom: 40px;
 	border-radius: 50%;
 	/*transform: scale(1);
 	transition: all 0.2s;*/

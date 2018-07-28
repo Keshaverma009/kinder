@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 300px;
+      height: 300px;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <div class="page-header">
+    <h1>Bootstrap 3 default carousel with swipe and touch gestures</h1>
+    <p class="lead">How to add the swipes gesture to comand the Bootstrap 3 carousel on mobile devices.</p>
+    <p>Made by <strong>Andrea Rufo</strong>, more info and tutorial on <a href="http://www.andrearufo.it/">andrearufo.it</a></p>
+  </div>
+       
+ <div class="col-md-4">
+          <!--Carousel-->
+          <div id="sidebar-carousel-1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators grey">
+              <li data-target="#sidebar-carousel-1" data-slide-to="0" class="active"></li>
+              <li data-target="#sidebar-carousel-1" data-slide-to="1"></li>
+              <li data-target="#sidebar-carousel-1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <a href="" data-lightbox="image-1" title="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxt-69SZZ6YpfK0fLF4-uTw2jPDMkwrScWcPlDbwAt54nkAIF" alt="...">
+                </a>
+              </div>
+              <div class="item">
+                <a href="" data-lightbox="image-1" title="">
+                <img src="https://cdn.pixabay.com/photo/2017/04/09/09/56/avenue-2215317_960_720.jpg" alt="...">
+                </a>                  </div>
+              <div class="item">
+                <a href="" data-lightbox="image-1" title="">
+                <img src="https://thumb1.shutterstock.com/display_pic_with_logo/478531/331381280/stock-photo-avenue-of-vibrant-purple-jacaranda-flowers-on-trees-331381280.jpg" alt="...">
+                </a>                  </div>
+            </div>
+             <!-- Controls -->
+        <a class="left carousel-control" href="#sidebar-carousel-1" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#sidebar-carousel-1" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+                  </div><!--/Carousel--></div>
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+   $("#myCarousel").swiperight(function() {
+      $(this).carousel('prev');
+    });
+   $("#myCarousel").swipeleft(function() {
+      $(this).carousel('next');
+   });
+});
+</script>
+</body>
+</html>

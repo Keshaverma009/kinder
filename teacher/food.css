@@ -11,6 +11,53 @@
 
 
 
+
+#navigation_bar {
+	background: #40c6ed;
+	height: 120px;
+}
+
+#navigation_bar ul#navigation_bar_ul {
+	list-style-type: none;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+}
+
+
+#navigation_bar ul#navigation_bar_ul li {
+	flex: 1;
+}
+
+#navigation_bar ul#navigation_bar_ul li a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 29px;
+	position: relative;
+	font-size: 55px;
+
+}
+
+
+
+
+
+#navigation_bar ul#navigation_bar_ul li:nth-child(4){
+	text-align: right;
+}
+
+#navigation_bar ul#navigation_bar_ul li a.active::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	height: 19px;
+	width: 89%;
+	background-color: yellow;
+}
+
+
 .btn {
 
   	display: inline-block;
@@ -45,12 +92,27 @@
 
 
 /* Style the active class (and buttons on mouse-over) */
+
+
 .active {
   background-color: blue;
   color: white;
   cursor: pointer;
 }
 
+#navigation_bar{
+	background: rgba(60,100,10,.9);
+}
+
+#navigation_bar ul#navigation_bar_ul li a.active1::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	height: 15px;
+	width: 89%;
+	background-color: yellow;
+}
 #wrapper #header {
 	display: flex;
 	display: -webkit-flex;
