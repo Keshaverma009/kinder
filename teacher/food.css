@@ -135,7 +135,6 @@
 	float: left;
 	text-align: center;
 	padding: 5px;
-	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
 }
@@ -168,7 +167,7 @@
 
 #main_section #activities .each_activity .each_activity_text{
 	text-align: center;
-	font-size: 30px;
+	font-size: 39px;
 }
 
 #main_section #activities .each_activity:hover {
