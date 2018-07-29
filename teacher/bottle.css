@@ -58,37 +58,7 @@
 }
 
 
-.btn {
 
-  	display: inline-block;
-	color:#29B9BB;
-	width: 49vw;
-	font-size: 40px;
-	text-align: center;
-	padding: 25px;
-	background-color: white;
-	border: .1px solid #39f;
-	margin-bottom: 20px;
-	margin-top: 20px;
-
-}
-
-
-
-.btn1 {
-
-  	display: inline-block;
-	color:#29B9BB;
-	width: 49vw;
-	font-size: 40px;
-	text-align: center;
-	padding: 25px;
-	background-color: white;
-	border: .1px solid #39f;
-	margin-bottom: 20px;
-	margin-top: 20px;
-
-}
 
 
 /* Style the active class (and buttons on mouse-over) */
@@ -286,8 +256,10 @@
 #student_main {
 	display: flex;
 	display: -webkit-flex;
+
 	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;}
+	margin: 0 auto;
+}
 
 #student_main div:nth-child(1) {
 	flex: 1;
@@ -302,7 +274,7 @@
 	padding: 5px;
 	align-self: center;
 	font-size: 35px;
-		margin-right: 40px;
+		margin-right: 20px;
 
 }
 .fa fa-pencil:hover{
@@ -316,7 +288,7 @@
 #time_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
+border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;	padding: 10px 0px;
 }
 
@@ -333,16 +305,15 @@
 	padding: 5px;
 	font-size: 35px;
 	align-self: center;
-		margin-right: 40px;
+		margin-right: 20px;
 
 }
 
 #meal_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
+border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;	padding: 10px 0px;
-	h
 }
 
 #meal_main div:nth-child(1) {
@@ -359,14 +330,14 @@
 	padding: 5px;
 	align-self: center;
 	font-size:35px;
-		margin-right: 40px;
+		margin-right: 20px;
 
 }
 
 #photo_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
+border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;	padding: 10px 0px;
 }
 
@@ -383,11 +354,11 @@
 	padding: 5px;
 	align-self: center;
 	font-size:35px;
-	margin-right: 40px;
+	margin-right: 20px;
 }
 
 #notes_main {
-	border-bottom: 5px solid #e1e1e1;width: 95%;
+border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;	padding: 10px 0px;
 }
 
@@ -398,8 +369,9 @@
 #food_details_main {
 	width: 98%;
 	margin: 5px auto;
-		border-bottom: 5px solid #e1e1e1;width: 95%;
+border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;
+	padding: 20px;
 }
 /*#food_detail{
 	margin-bottom: 200px;
@@ -410,7 +382,8 @@
 	display: -webkit-flex;
 /*	border: .1px solid #39f;
 */	position: relative;
-	margin: 5px auto;
+	margin-left: 13%;
+	/*margin-right: */
 }
 
 
@@ -442,7 +415,7 @@ cursor: pointer;
 	background-color: white;
 	border: 1px solid #39f;
 	border-radius: 20px;
-	margin-right: 40px;
+	margin-right: 20px;
 
 }
 #potty_details_main .potty_detail button:nth-firstchild{

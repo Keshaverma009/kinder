@@ -61,7 +61,7 @@
 .btn {
 
   	display: inline-block;
-	color:#29B9BB;
+	color:#FB7367;
 	width: 49vw;
 	font-size: 40px;
 	text-align: center;
@@ -78,7 +78,7 @@
 .btn1 {
 
   	display: inline-block;
-	color:#29B9BB;
+	color:#FB7367;
 	width: 49vw;
 	font-size: 40px;
 	text-align: center;
@@ -95,7 +95,7 @@
 
 
 .active {
-  background-color: #29B9BB;
+  background-color: #FB7367;
   color: white;
   cursor: pointer;
 }
@@ -286,8 +286,8 @@
 #student_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;}
+	border-bottom: 2spx solid #e1e1e1;
+}
 
 #student_main div:nth-child(1) {
 	flex: 1;
@@ -316,8 +316,8 @@
 #time_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;	padding: 10px 0px;
+	border-bottom: 10px solid #e1e1e1;
+	padding: 10px 0px;
 }
 
 #time_main div:nth-child(1) {
@@ -340,9 +340,8 @@
 #meal_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;	padding: 10px 0px;
-	h
+	border-bottom: 10px solid #e1e1e1;
+	padding: 10px 0px;
 }
 
 #meal_main div:nth-child(1) {
@@ -366,8 +365,8 @@
 #photo_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;	padding: 10px 0px;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 10px 0px;
 }
 
 #photo_main div:nth-child(1) {
@@ -387,8 +386,8 @@
 }
 
 #notes_main {
-	border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;	padding: 10px 0px;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 10px 0px;
 }
 
 #notes_main div {
@@ -398,8 +397,8 @@
 #food_details_main {
 	width: 98%;
 	margin: 5px auto;
-		border-bottom: 5px solid #e1e1e1;width: 95%;
-	margin: 0 auto;
+		border-bottom: 1px solid #e1e1e1;
+
 }
 /*#food_detail{
 	margin-bottom: 200px;
@@ -419,89 +418,3 @@ cursor: pointer;
 }
 
 
-
-
-#potty_details_main {
-	width: 98%;
-	margin: 5px auto;
-}
-
-#potty_details_main div {
-	display: flex;
-	display: -webkit-flex;
-	position: relative;
-	margin: 5px auto;
-}
-
-#potty_details_main .potty_detail button {
-	display: inline-block;
-	color:blue;
-	width: 18vw;
-	text-align: center;
-	padding: 6px;
-	background-color: white;
-	border: 1px solid #39f;
-	border-radius: 20px;
-	margin-right: 40px;
-
-}
-#potty_details_main .potty_detail button:nth-firstchild{
-	margin-left: 20px;
-}
-
-
-#potty_details_main .potty_detail button:hover {
-
-	cursor: pointer;
-	background: blue;
-	color: white;
-
-}
-
-#photos img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-}
-
-#photos {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;  
-}
-
-
-@media (max-width: 1200px) {
-  #photos {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
-  }
-}
-@media (max-width: 1000px) {
-  #photos {
-  -moz-column-count:    3;
-  -webkit-column-count: 3;
-  column-count:         3;
-  }
-}
-@media (max-width: 800px) {
-  #photos {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 400px) {
-  #photos {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
-}

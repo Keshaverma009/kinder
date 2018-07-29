@@ -3,13 +3,16 @@
 <head>
 	<title>Kinder | Bottle</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="food.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bottle.css">
 <meta name="viewport" content="user-scalable=no" />
 
 </head>
 <body>
 	<div id="wrapper">
-		<div id="header">
+		<div id="header" style="background: #29B9BB;">
 			<div>
 				<button onclick="location.href = 'index.html'" type="button"><i class="fa fa-times"></i></button>
 			</div>
@@ -60,30 +63,42 @@
 
 
 			<div id="time_main" onclick="edit_time()">
-				<div style="font-size: 40px;font-weight: bold;">
+				<div style="font-size: 40px;font-weight: bold;margin: 10px">
 					Time: 
-					<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
+					<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:#29B9BB;font-weight: bold;padding:5px;display:none;" value="13:00"> 
 
- 					<span style="color:blue;display: inline-block;" class = "time"  ></span>
+ 					<span style="color:#29B9BB;display: inline-block;" class = "time"  ></span>
 
 				</div>
 				<div>
-					<i class="fa fa-pencil"></i>
+					<i  style="color: black;" class="fa fa-pencil"></i>
 				</div>
 
 			</div>
 
 			<div id="food_details_main">
-			
+							<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;margin-left: 0px;">Choose Volume of Milk</div>
+
 					
-				<div id="food_detail" style="margin-bottom: 10px;margin-top: 10px;">
-					<select style="font-size: 50px ;width:400px;margin-left: 15%;">
-						<option>4</option>
-						<option>8</option>
-						<option>12</option>
-						<option>16</option>
-					</select>
-					<button   style="background-color: blue; color: white;font-size: 40px;padding:30px;">Ounces</burron>
+				<div id="food_detail" >
+
+				                                      
+				  <div class="dropdown">
+				    <button  style=" color: #29B9BB;font-size: 40px;padding:10px;" class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Choose
+				    <span class="caret"></span></button>
+				    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="font-size: 38px;">
+				      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4</a></li>
+				      <li role="presentation" class="divider"></li>
+				      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">8</a></li>
+					  <li role="presentation" class="divider"></li>
+				      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">12</a></li>
+					  <li role="presentation" class="divider"></li>
+				      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">16</a></li>
+				    </ul>
+				 				</div>
+
+					
+					<button   style="background-color: #29B9BB; color: white;font-size: 40px;padding:10px;float: left;">Ounces</burron>
 					
 				</div>
 			
@@ -92,20 +107,20 @@
 
 			
 			<div id="photo_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px">Photos</div>
-				<div><i style="color: #39f" class="fa fa-camera"></i></div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin: 10px;">Photos</div>
+				<div><i style="color: black" class="fa fa-camera"></i></div>
 			</div>
 
 			<div id="notes_main">
 				<div style="font-size: 14px;font-weight: bold;font-size:40px">Notes</div>
 
 				<div>
-		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:40px;" placeholder="Optional Type notes here"></textarea>
+		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:35px;" placeholder="Optional Type notes here"></textarea>
 				</div>
 			</div>
 		</div>
 
-		<div id="footer" onclick="location.href = 'index.html'" >
+		<div id="footer" onclick="location.href = 'index.html'" style="background: #29B9BB;" >
 			<div id="footer_text">
 				Save
 			</div>
@@ -188,5 +203,8 @@ function tick(e)
 
 			window.addEventListener('load',firstfunction);
 		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
