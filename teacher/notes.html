@@ -52,7 +52,13 @@
 			</div>
 			<div id="photo_main">
 				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:20px;">Photos</div>
-				<div><i style="color: #39f" class="fa fa-camera"></i></div>
+				<div><i style="color: #39f"  id="imgFileUpload" alt="Select File" title="Select File"  class="fa fa-camera"></i></div>
+
+
+					<br />
+					<span id="spnFilePath"></span>
+					<input type="file" id="image" style="display: none" />
+
 			</div>
 
 			<div id="notes_main">
@@ -171,6 +177,25 @@ function tick(e)
 				counter = 1;
 				startTime();
 			}
+
+
+
+			 window.onload = function () {
+			        var fileupload = document.getElementById("image");
+			        var filePath = document.getElementById("spnFilePath");
+			        var image = document.getElementById("imgFileUpload");
+			        image.onclick = function () {
+			            fileupload.click();
+			        };
+			        fileupload.onchange = function () {
+			            var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+			            filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+			        };
+			    };
+
+
+
+
 			window.addEventListener('load',firstfunction());
 		</script>
 </body>

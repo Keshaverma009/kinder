@@ -101,11 +101,17 @@
 				</div>
 			</div>
  -->
-			<div id="photo_main">
-				<div style="font-weight: bold;font-size:40px;margin:10px;">Photos</div>
-				<div><i style="color: #39f" class="fa fa-camera"></i></div>
-			</div>
+		
+					<div id="photo_main">
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:20px;">Photos</div>
+				<div><i style="color: #39f"  id="imgFileUpload" alt="Select File" title="Select File"  class="fa fa-camera"></i></div>
 
+
+					<br>
+					<span id="spnFilePath"></span>
+					<input type="file" id="image" style="display: none" />
+
+			</div>
 			<div id="notes_title" style="border-bottom: 5px solid #e1e1e1;width: 95%;
 	margin: 0 auto;">
 				<div style="font-weight: bold;font-size:40px;margin:20px; margin-left: 10px">Title</div>
@@ -205,6 +211,23 @@ function tick(e)
 				document.getElementsByClassName('time')[0].style.display='none';
 				
 			}
+
+
+
+
+			 window.onload = function () {
+			        var fileupload = document.getElementById("image");
+			        var filePath = document.getElementById("spnFilePath");
+			        var image = document.getElementById("imgFileUpload");
+			        image.onclick = function () {
+			            fileupload.click();
+			        };
+			        fileupload.onchange = function () {
+			            var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+			            filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+			        };
+			    };
+
 	window.addEventListener('load',firstfunction);
 		
 		</script>

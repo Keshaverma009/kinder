@@ -33,7 +33,7 @@
 					<div class="tick">
 						<i class="fa fa-check"></i>
 					</div>
-					<div class="each_activity_text">Ashutosh</div>
+					<div class="each_activity_text">Asutosh</div>
 				</div>
 				<div class="each_activity" onclick="tick(1)">
 					<div class="each_activity_circle">
@@ -42,7 +42,7 @@
 					<div  class="tick">
 						<i class="fa fa-check"></i>
 					</div>
-					<div class="each_activity_text">Jackie</div>
+					<div class="each_activity_text">Jakie</div>
 				</div>
 				<div class="each_activity"  onclick="tick(2)">
 					<div class="each_activity_circle">
@@ -57,14 +57,14 @@
 		</div>
 	</div>
 
-<!-- 
 
-			<div id="time_main"  onclick="edit_time(1)">
+
+			<!-- <div id="time_main">
 				<div style="font-size: 40px;font-weight: bold;margin:10px;">
-					Start Time: 
+					Time: 
 				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="13:00"> 
 
- 					<span style="color:blue;display: inline-block;" class = "time" ></span>
+ 					<span style="color:blue;display: inline-block;" class = "time"  onclick="edit_time(1)"></span>
 
 					</div>
 				
@@ -72,51 +72,67 @@
 					<i class="fa fa-pencil"></i>
 				</div>
 
-			</div>	
-			<div id="time_main"  onclick='edit_time(2)'>
-				<div style="font-size: 40px;font-weight: bold;margin:10px;">
-					End Time&nbsp;&nbsp;:
-					<input  id="end_time" type="time" name="end_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:blue;font-weight: bold;padding:5px;display:none;" value="15:00:00"> 
-						<span style="color:blue;display: inline-block;" class = "time"  ></span>
-				</div>
-				
-				<div>
-					<i class="fa fa-pencil"></i>
-				</div>
+			</div> -->	
 
-		</div>
-
-			
-
-			
-				
-			
 			</div>
---
-			 -->
+
+		<!-- 	<div id="food_details_main">
+			
+
+				<div id="food_detail">
+					<button class="btn" onclick="location.href='notes.html'" >Private</button>
+					<button class="btn" onclick="location.href='pnotes.html'"  >Public</burron>
+					
+				</div>
+				
+			</div> -->
 
 			<div id="photo_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:10px;">Photos</div>
-				<div><i style="color: #black" class="fa fa-camera"></i></div>
-			</div>
+					<div style="font-size: 14px;font-weight: bold;font-size:40px;margin:20px;">Photos</div>
+					<div><i style="color: #39f"  id="imgFileUpload" alt="Select File" title="Select File"  class="fa fa-camera"></i></div>
 
+
+						<br>
+						<span id="spnFilePath"></span>
+						<input type="file" id="image" style="display: none" />
+
+			</div>
 			<div id="notes_main">
-				<div style="font-size: 14px;font-weight: bold;font-size:40px">Notes</div>
+				<div style="font-size: 14px;font-weight: bold;font-size:40px;">Notes</div>
 
 				<div>
-		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:40px;" placeholder="Optional Type notes here"></textarea>
+		<textarea style="width: 100%;border: none; outline: none;resize: none;font-size:46px;"  rows="5" placeholder="Optional Type notes here"></textarea>
 				</div>
 			</div>
 		</div>
 
-		<div id="footer" onclick="location.href = 'index.html'" style="background: #5ea758;">
+		<div id="footer" onclick="location.href = 'index.html'" style="background: #8bbd78;" >
 			<div id="footer_text">
 				Save
 			</div>
 		</div>
 
+
+
+
+
 		<script type="text/javascript">
 
+
+			var button1 = document.getElementsByClassName('btn');
+			for(i = 0; i < button1.length;i++) {
+
+				button1[i].addEventListener('click', function() {
+					// give the class another one
+					var elements = document.getElementsByClassName('btn');
+					for(j = 0; j < elements.length;j++)
+						elements[j].classList.remove('active')
+
+					this.classList.add('active');
+				});
+			}
+
+			
 
 
 
@@ -128,19 +144,19 @@
 					  return i;
 					}
 
-					function startTime() {
-					  var today = new Date();
-					  var h = today.getHours();
-					  var m = today.getMinutes();
-					  // add a zero in front of numbers<10
-					  m = checkTime(m);
-					  document.getElementsByClassName('time')[0].innerHTML = h + ":" + m ;
-					  document.getElementsByClassName('time')[1].innerHTML = h + ":" + m ;
-					  t = setTimeout(function() {
-					    startTime()
-					  }, 500);
-					}
-					startTime();
+			function startTime() {
+				  var today = new Date();
+				  var h = today.getHours();
+				  var m = today.getMinutes();
+				  // add a zero in front of numbers<10
+				  m = checkTime(m);
+				  document.getElementsByClassName('time')[0].innerHTML = h + ":" + m ;
+				  document.getElementsByClassName('time')[1].innerHTML = h + ":" + m ;
+				  t = setTimeout(function() {
+				    startTime()
+				  }, 500);
+			}
+					
 
 
 
@@ -174,13 +190,8 @@ function tick(e)
 		}
 		
 	}
-	function  firstfunction()
-
-	{
-		counter = 1;
-
-	}
-	window.addEventListener('load',firstfunction);
+	
+	
 			
 
 			function edit_time(number){
@@ -195,6 +206,27 @@ function tick(e)
 
 				}
 			}
+
+			function  firstfunction()
+
+			{
+				counter = 1;
+				startTime();
+			}
+			 window.onload = function () {
+			        var fileupload = document.getElementById("image");
+			        var filePath = document.getElementById("spnFilePath");
+			        var image = document.getElementById("imgFileUpload");
+			        image.onclick = function () {
+			            fileupload.click();
+			        };
+			        fileupload.onchange = function () {
+			            var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+			            filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+			        };
+			    };
+
+			window.addEventListener('load',firstfunction());
 		</script>
 </body>
 </html>
