@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <title>Kinder | Parent</title>
+
+  </head>
+
+
+  <body style="background-color: #E9E9EE" >
+
+
+
+  	<div class="card" style="margin: 5px;background-image: url(http://assets-cdn.ekantipur.com/images/the-kathmandu-post-archive/ped/2014/20140613the-new-preschool-paradigm-600x0.jpg);background-color: rgba(0,0,0,0.5)">
+		<div class="card-body">
+
+					<div class="row" style="padding-left: 15px;; ">
+							<div class=".col-6 .col-md-4">
+							<img style="border-radius: 50%;" src="images/baby2.jpeg" width="70" height=70">&nbsp;
+							</div>
+							<div  style="margin-left: 95px;" class=".col-12 .col-md-8">
+								
+						<div class="dropdown"  style="padding-top: 15px;">
+						  <button style=" background: white;border:1px solid rgba(0,0,0,.5); 	" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    All Activities
+						  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#">Photos</a>
+							    <a class="dropdown-item" href="#">Observation</a>
+							    <a class="dropdown-item" href="#">Nap</a>  
+							     <a class="dropdown-item" href="#">Food</a>
+							    <a class="dropdown-item" href="#">Potty</a>
+							    <a class="dropdown-item" href="#">Notes</a>
+							  </div>
+						</div>
+
+							</div>
+						</div>
+						<span class="row" style="font-size: 28px; font-weight:  bold;padding: 0px;margin: 0px;margin-top:5px;color:white; ">Keshav</span>
+					
+					<button onclick="location.href='index.html'" type="button" style="margin-top: 20px;margin-left: 0px;" class="btn btn-success">Home</button>
+
+		  	</div>	
+		</div>	
+	</div>
+<div class="card" >
+  <div class="card-body">
+    <h4 class="card-title">Weekly Report of Keshav</h4>
+    <h3 class="card-title">Potty vs Diaper</h3>
+   
+  </div>
+</div>
+<canvas id="speedChart" width="600" height="400"></canvas>
+<script>var speedCanvas = document.getElementById("speedChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Potty",
+    data: [0, 2, 1, 2, 1, 2, 1],
+    lineTension: 0.3,
+    fill: false,
+    borderColor: 'red',
+    backgroundColor: 'transparent',
+    pointBorderColor: 'red',
+    pointBackgroundColor: 'lightgreen',
+    pointRadius: 5,
+    pointHoverRadius: 15,
+    pointHitRadius: 30,
+    pointBorderWidth: 2,
+    pointStyle: 'rect'
+  };
+
+var dataSecond = {
+    label: "Diaper",
+    data: [2, 3, 4, 5, 2, 3, 1],
+    lineTension: 0.3,
+    fill: false,
+    borderColor: 'purple',
+    backgroundColor: 'transparent',
+    pointBorderColor: 'purple',
+    pointBackgroundColor: 'lightgreen',
+    pointRadius: 5,
+    pointHoverRadius: 15,
+    pointHitRadius: 30,
+    pointBorderWidth: 2
+  };
+
+var speedData = {
+  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  datasets: [dataFirst, dataSecond]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+var lineChart = new Chart(speedCanvas, {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+});
+</script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     </body>
+
+</html>
