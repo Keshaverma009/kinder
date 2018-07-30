@@ -286,7 +286,7 @@
 #student_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 2spx solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 }
 
 #student_main div:nth-child(1) {
@@ -316,7 +316,7 @@
 #time_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 10px solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 	padding: 10px 0px;
 }
 
@@ -340,7 +340,7 @@
 #meal_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 10px solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 	padding: 10px 0px;
 }
 
@@ -365,7 +365,7 @@
 #photo_main {
 	display: flex;
 	display: -webkit-flex;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 	padding: 10px 0px;
 }
 
@@ -386,7 +386,7 @@
 }
 
 #notes_main {
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 	padding: 10px 0px;
 }
 
@@ -397,7 +397,7 @@
 #food_details_main {
 	width: 98%;
 	margin: 5px auto;
-		border-bottom: 1px solid #e1e1e1;
+	border-bottom: 5px solid #e1e1e1;width: 95%;
 
 }
 /*#food_detail{
@@ -413,8 +413,38 @@
 }
 
 
+button:hover{
+animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+#letter1:hover > div#top-div2 {
+    /* code */
+}
+
+
 i:hover{
 cursor: pointer;
 }
 
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
