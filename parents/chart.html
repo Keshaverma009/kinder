@@ -54,18 +54,64 @@
 		  	</div>	
 		</div>	
 	</div>
-<div class="card" >
-  <div class="card-body">
-    <h4 class="card-title">Weekly Report of Keshav</h4>
-    <h3 class="card-title">Potty vs Diaper</h3>
-   
-  </div>
-</div>
-<canvas id="speedChart" width="600" height="400"></canvas>
+
+
+	<div class="card" style="margin: 5px;">
+
+				<div class="card-body">
+					<h5 class="card-title">Observation</h5>
+				  		<div class="row" style="padding-left: 15px;">
+							<canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+
+
+				  	</div>
+				 </div>
+
+		</div>
+<div class="card" style="margin: 5px;">
+
+				<div class="card-body">
+					<h5 class="card-title">Potty vs Diaper</h5>
+				  		<div class="row" style="padding-left: 15px;">
+
+
+									<canvas id="speedChart" width="600" height="400"></canvas>
+
+				  	</div>
+				 </div>
+
+	</div>
+
+		<div class="card" style="margin: 5px;">
+
+				<div class="card-body">
+					<h5 class="card-title">Nap</h5>
+				  		<div class="row" style="padding-left: 15px;">
+
+
+						<canvas id="densityChart" width="600" height="400"></canvas>
+				  	</div>
+				 </div>
+
+		</div>
+
+
+
+
+
+
+
+
 <script>var speedCanvas = document.getElementById("speedChart");
 
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
+
+
+
+
+
+
 
 var dataFirst = {
     label: "Potty",
@@ -99,7 +145,7 @@ var dataSecond = {
   };
 
 var speedData = {
-  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  labels: ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
   datasets: [dataFirst, dataSecond]
 };
 
@@ -114,11 +160,130 @@ var chartOptions = {
   }
 };
 
+
 var lineChart = new Chart(speedCanvas, {
   type: 'line',
   data: speedData,
-  options: chartOptions
+
+  options: {
+      legend: { display: true },
+      title: {
+        display: true,
+        text: 'Weekly Reports'
+      },
+      scales: {
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'No of Diapers'
+      }
+    }]
+  }    
+    }
 });
+
+
+
+
+
+
+var densityCanvas = document.getElementById("densityChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var densityData = {
+  label: 'Nap',
+
+  data: [2, 1, .5, 1, 2, 1, 2, 3],
+  backgroundColor: [
+    'rgba(255, 10, 1, 0.6)',
+    'rgba(30, 99, 132, 0.6)',
+    'rgba(60, 99, 132, 0.6)',
+    'rgba(255, 10, 1, 0.6)',
+    'rgba(255, 9, 32, 0.6)',
+    'rgba(150, 99, 132, 0.6)',
+    'rgba(180, 99, 132, 0.6)',
+    'rgba(255, 10, 1, 0.6)',
+    'rgba(240, 99, 132, 0.6)'
+  ],
+  borderColor: [
+    'rgba(0, 99, 132, 1)',
+    'rgba(30, 99, 132, 1)',
+    'rgba(60, 99, 132, 1)',
+    'rgba(90, 99, 132, 1)',
+    'rgba(120, 99, 132, 1)',
+    'rgba(150, 99, 132, 1)',
+    'rgba(180, 99, 132, 1)',
+    'rgba(210, 99, 132, 1)',
+    'rgba(240, 99, 132, 1)'
+  ],
+  borderWidth: 2,
+  hoverBorderWidth: 0,
+
+
+
+};
+
+var barChart = new Chart(densityCanvas, {
+  type: 'bar',
+  data: {
+  labels: ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [densityData],
+
+
+
+  },
+  options: {
+      legend: { display: true },
+      title: {
+        display: true,
+        text: 'Weekly Reports'
+      },
+      scales: {
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Time(hours)'
+      }
+    }]
+  }    
+    }
+});
+
+
+new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'line',
+    data: {
+      labels: ["Week1", "Week2","Week3", "Week4"],
+      datasets: [
+        {
+          label: "Fine Motor",
+          backgroundColor: 'transparent',
+          borderColor:'green',
+          // data: ["Introduced(0)", "Developing(0.5)", "Mastered(1)"	]
+          data: [0,.5,1,1]
+        },
+
+         {
+          label: "Cognition",
+          backgroundColor: 'transparent',
+          borderColor:'red',
+          // data: ["Introduced(0)", "Developing(0.5)", "Mastered(1)"	]
+          data: [.5,.5,1.5,2]
+        }
+      ]
+    },
+    options: {
+      legend: { display: true },
+      title: {
+        display: true,
+        text: 'Monthly Reports'
+      }
+    }
+});
+
+
 </script>
 
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

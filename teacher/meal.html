@@ -3,6 +3,13 @@
 <head>
 	<title>Kinder | Meal</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+            
 	<link rel="stylesheet" href="food.css">
 <meta name="viewport" content="user-scalable=no" />
 
@@ -59,7 +66,7 @@
 
 
 
-			<div id="time_main" onclick="edit_time(1)">
+			<!-- <div id="time_main" onclick="edit_time(1)">
 				<div style="font-size: 40px;font-weight: bold;margin:10px;">
 					Time: 
 				<input  id="start_time" type="time" name="start_time" style="font-size:30px;margin: 10px; border-radius: 20px;color:#29B9BB;font-weight: bold;padding:5px;display:none;" value="13:00"> 
@@ -72,7 +79,7 @@
 					<i class="fa fa-pencil"></i>
 				</div>
 
-			</div>	
+			</div> -->	
 
 			</div>
 
@@ -80,10 +87,10 @@
 			
 
 				<div id="food_detail">
-					<button class="btn" >Breakfast</button>
-					<button class="btn" >Lunch</burron>
-					<button class="btn" >Snack</button>
-					<button class="btn" >Dinner</button>
+					<button class="btn2" >Breakfast</button>
+					<button class="btn2" >Lunch</burron>
+					<button class="btn2" >Snack</button>
+					<button class="btn2" >Dinner</button>
 				</div>
 				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;margin:10px;">
 				How much?
@@ -125,25 +132,37 @@
 			</div>
 		</div>
 
-		<div id="footer" onclick="location.href = 'index.html'"  style="background: #29B9BB;">
+		<div id="footer"  onclick="myFunction()	" style="background: #29B9BB;">
 			<div id="footer_text">
 				Save
 			</div>
 		</div>
 
 
+			<div id="snackbar">Sent</div>
 
 
 
 		<script type="text/javascript">
 
+			
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
 
-			var button1 = document.getElementsByClassName('btn');
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+    window.location.href = 'index.html';
+
+}
+
+
+
+			var button1 = document.getElementsByClassName('btn2');
 			for(i = 0; i < button1.length;i++) {
 
 				button1[i].addEventListener('click', function() {
 					// give the class another one
-					var elements = document.getElementsByClassName('btn');
+					var elements = document.getElementsByClassName('btn2');
 					for(j = 0; j < elements.length;j++)
 						elements[j].classList.remove('active')
 

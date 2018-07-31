@@ -1,8 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "sans-serif";
 	box-sizing: border-box;
+
+    font-family: sans-serif;
+
 }
 
 #wrapper {
@@ -13,7 +15,7 @@
 
 
 #navigation_bar {
-	background: #40c6ed;
+	background: #40BFAD;
 	height: 120px;
 }
 
@@ -54,11 +56,11 @@
 	left: 15px;
 	height: 19px;
 	width: 89%;
-	background-color: yellow;
+	background-color: #E40C7F;
 }
 
 
-.btn {
+.btn2 {
 
   	display: inline-block;
 	color:#29B9BB;
@@ -111,7 +113,7 @@
 	left: 15px;
 	height: 15px;
 	width: 89%;
-	background-color: yellow;
+	background-color: #E40C7F;
 }
 #wrapper #header {
 	display: flex;
@@ -508,7 +510,7 @@ cursor: pointer;
 
 
 
-
+/*
 
 .btn:hover{
 animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -548,4 +550,52 @@ perspective: 1000px;
 }
 
 
+}*/
+
+
+
+
+
+/*Toast completion messsage*/
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -165px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 37px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }

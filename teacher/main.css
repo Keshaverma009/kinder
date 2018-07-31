@@ -1,14 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "sans-serif";
+    font-family:  sans-serif;
+    /*font-family: "Times New Roman";*/
 	box-sizing: border-box;
 	/*display: -webkit-inline-box;*/
 }
 
 
 #navigation_bar {
-	background: #4FA06A;
+	background: #40BFAD;
 	height: 120px;
 }
 
@@ -49,7 +50,7 @@
 	left: 15px;
 	height: 15px;
 	width: 89%;
-	background-color: yellow;
+	background-color: #E40C7F;
 }
 
 #main_section {
