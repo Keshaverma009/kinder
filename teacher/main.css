@@ -110,7 +110,7 @@ font-size: 206px;
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -165px;
+    margin-left: -135px;
     background-color: #333;
     color: #fff;
     text-align: center;
