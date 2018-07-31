@@ -267,9 +267,20 @@
 		</div>
 	</div>
 
+			<div id="snackbar">Sent</div>
 
 	<script type="text/javascript">
 		
+
+			
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+
+}
+
 
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -296,6 +307,10 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+	window.addEventListener('load',myFunction());
+
 	</script>
 </body>
 </html>

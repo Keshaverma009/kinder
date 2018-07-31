@@ -56,6 +56,62 @@
 	</div>
 
 
+
+
+    <div class="card" style="margin: 5px;">
+
+        <div class="card-body">
+          <h5 class="card-title">Food</h5>
+              <div class="row" style="padding-left: 15px;">
+              <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Day</th>
+
+      <th scope="col">Food</th>
+      <th scope="col">Remarks</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="col">Sun</th>
+      <td>Carrots</td>
+      <td style="color:green;">Ate well</td>
+    </tr>
+    <tr>
+      <th scope="col">Mon</th>
+      <td>Dal Bhat</td>
+      <td style="color:red">Didn't eat well</td>
+    </tr>
+    <tr>
+      <th scope="col">Tue</th>   
+        <td>Apples</td>
+      <td  style="color:green">Didn't eat well</td>
+    </tr> 
+
+    <tr>
+      <th scope="col">Wed</th>   
+        <td>Chicken,Roti</td>
+      <td  style="color:red" >Didn't eat well</td>
+    </tr> <tr>
+      <th scope="col">Thu</th>   
+       <td>Peas,pudding</td>
+      <td  style="color:green" >Ate well</td>
+    </tr> <tr>
+      <th scope="col">Fri</th>   
+      <td>Khichidi</td>
+      <td  style="color:green">Ate well</td>
+    </tr> 
+  </tbody>
+</table>
+
+
+            </div>
+         </div>
+
+    </div>
+
 	<div class="card" style="margin: 5px;">
 
         <div class="card-body">
@@ -71,69 +127,10 @@
 
 
 
-
-    <div class="card" style="margin: 5px;">
-
-				<div class="card-body">
-					<h5 class="card-title">Food</h5>
-				  		<div class="row" style="padding-left: 15px;">
-							<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Day</th>
-
-      <th scope="col">Food</th>
-      <th scope="col">Drink</th>
-      <th scope="col">Remarks</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="col">Sun</th>
-      <td>Carrots</td>
-      <td>Milk</td>
-      <td>Ate well</td>
-    </tr>
-    <tr>
-      <th scope="col">Mon</th>
-      <td>Carrots</td>
-      <td>Milk</td>
-      <td style="color:red">Didn't eat well</td>
-    </tr>
-    <tr>
-      <th scope="col">Tue</th>   
-        <td>Carrots</td>
-        <td>Milk</td>
-      <td>Didn't eat well</td>
-    </tr> <tr>
-      <th scope="col">Wed</th>   
-        <td>Carrots</td>
-      <td>Milk</td>
-      <td>Didn't eat well</td>
-    </tr> <tr>
-      <th scope="col">Thu</th>   
-       <td>Carrots</td>
-      <td>Milk</td>
-      <td>Ate well</td>
-    </tr> <tr>
-      <th scope="col">Fri</th>   
-      <td>Carrots</td>
-      <td>Milk</td>
-      <td>Ate well</td>
-    </tr> 
-  </tbody>
-</table>
-
-
-				  	</div>
-				 </div>
-
-		</div>
 <div class="card" style="margin: 5px;">
 
 				<div class="card-body">
-					<h5 class="card-title">Potty vs Diaper</h5>
+					<h5 class="card-title">Potty and Diaper</h5>
 				  		<div class="row" style="padding-left: 15px;">
 
 
@@ -231,7 +228,7 @@ var lineChart = new Chart(speedCanvas, {
       legend: { display: true },
       title: {
         display: true,
-        text: 'Weekly Reports'
+        text: 'Weekly Reports (August)'
       },
       scales: {
     yAxes: [{
@@ -307,7 +304,11 @@ var barChart = new Chart(densityCanvas, {
       scaleLabel: {
         display: true,
         labelString: 'Time(hours)'
-      }
+      },
+      ticks: {
+        autoSkip: true,
+        maxTicksLimit: 6
+    }
     }]
   }    
     }
@@ -331,7 +332,6 @@ new Chart(document.getElementById("bar-chart-horizontal"), {
           label: "Cognition",
           backgroundColor: 'transparent',
           borderColor:'red',
-          // data: ["Introduced(0)", "Developing(0.5)", "Mastered(1)"	]
           data: [.5,.5,1.5,2]
         }
       ]
@@ -340,8 +340,17 @@ new Chart(document.getElementById("bar-chart-horizontal"), {
       legend: { display: true },
       title: {
         display: true,
-        text: 'Monthly Reports'
+        text: 'Monthly Reports(August)'
+      },
+
+      scales: {
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'Skill Level'
       }
+    }]
+  }    
     }
 });
 
