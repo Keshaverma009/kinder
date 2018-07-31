@@ -132,7 +132,7 @@
 			</div>
 		</div>
 
-		<div id="footer"  onclick="myFunction()	" style="background: #29B9BB;">
+		<div id="footer"  onclick="location.href='index.html'" style="background: #29B9BB;">
 			<div id="footer_text">
 				Save
 			</div>
@@ -144,17 +144,6 @@
 
 
 		<script type="text/javascript">
-
-			
-function myFunction() {
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-
-}
-
-
 
 			var button1 = document.getElementsByClassName('btn2');
 			for(i = 0; i < button1.length;i++) {
@@ -280,9 +269,7 @@ function tick(e)
 
 
 
-			// window.addEventListener('load',firstfunction());
-			window.addEventListener('load',myFunction());
-
+			window.addEventListener('load',firstfunction());
 		</script>
 </body>
 </html>

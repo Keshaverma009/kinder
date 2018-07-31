@@ -110,7 +110,7 @@ font-size: 206px;
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -165px;
+    margin-left: -135px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -119,7 +119,7 @@ font-size: 206px;
     position: fixed;
     z-index: 1;
     left: 50%;
-    bottom: 30px;
+    bottom: 190px;
     font-size: 37px;
     background: #dff0d8;
     color: #3c763d;
@@ -133,20 +133,20 @@ font-size: 206px;
 
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
+    to {bottom: 190px; opacity: 1;}
 }
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    to {bottom: 190px; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
+    from {bottom: 190px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
 }
 
 @keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
+    from {bottom: 190px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
