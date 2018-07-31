@@ -87,16 +87,17 @@
 			
 
 				<div id="food_detail">
-					<button class="btn2" >Breakfast</button>
-					<button class="btn2" >Lunch</burron>
-					<button class="btn2" >Snack</button>
-					<button class="btn2" >Dinner</button>
-				</div>
+					<button class="btn2 active" onclick='myFunction()' >Breakfast</button>
+					<button class="btn2" onclick='myFunction()' >Lunch</button>
+					<button class="btn2" onclick='myFunction()' >Snack</button>
+					<button class="btn2"  onclick='myFunction()' >Dinner</button>
+				</div><!--
+				<div id="snackbar" style='border-bottom:5px solid black;width:95%;margin-left:100px;'></div> -->
 				<div style="font-weight: bold;padding-left: 5px;padding-bottom: 5px;font-size:40px;border:none;margin:10px;">
 				How much?
 			</div>
 				<div id="food_detail_two">
-					<button class="btn1" >Ate Well <i style="margin-left: 40px;margin-top:10px;color: black;background: yellow;font-size: 50px;border-radius: 90%;" class="fa fa-smile-o" aria-hidden="true"></i></button>
+					<button class="btn1 active" >Ate Well <i style="margin-left: 40px;margin-top:10px;color: black;background: yellow;font-size: 50px;border-radius: 90%;" class="fa fa-smile-o" aria-hidden="true"></i></button>
 					<button class="btn1" >Didn't Eat Well<i style="margin-left: 40px;margin-top:10px;color: black;background: yellow;font-size: 50px;border-radius: 90%;" class="fa fa-frown-o" aria-hidden="true"></i></button>
 					<button style="display: none;" class="btn1" >Didn't Eat Well</button>
 					<button style="display: none;" class="btn1" >Didn't Eat Well</button>
@@ -132,19 +133,42 @@
 			</div>
 		</div>
 
-		<div id="footer"  onclick="location.href='index.html'" style="background: #29B9BB;">
-			<div id="footer_text">
+		<div id='footer' onclick="location.href='index.html'" style="background: #29B9BB;">
+			<div id='footer_text' >
 				Save
 			</div>
 		</div>
 
+	
 
-			<div id="snackbar">Sent</div>
+			
 
 
 
 		<script type="text/javascript">
 
+			
+			function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			var button1 = document.getElementsByClassName('btn2');
 			for(i = 0; i < button1.length;i++) {
 
