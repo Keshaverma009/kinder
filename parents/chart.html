@@ -316,25 +316,31 @@ var barChart = new Chart(densityCanvas, {
 
 
 new Chart(document.getElementById("bar-chart-horizontal"), {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: ["Week1", "Week2","Week3", "Week4"],
+
       datasets: [
         {
           label: "Fine Motor",
-          backgroundColor: 'transparent',
-          borderColor:'green',
+          backgroundColor: 'green',
+          borderColor:'black',
           // data: ["Introduced(0)", "Developing(0.5)", "Mastered(1)"	]
-          data: [0,.5,1,1]
+          data: [0.5,1,2,2],
+            borderWidth: 2,
+
         },
 
          {
           label: "Cognition",
-          backgroundColor: 'transparent',
-          borderColor:'red',
-          data: [.5,.5,1.5,2]
+          backgroundColor: 'rgba(0,0,255,0.8)',
+          borderColor:'black',
+          data: [0.5,1,1,2],
+            borderWidth: 2,
+
         }
-      ]
+      ],
+
     },
     options: {
       legend: { display: true },
@@ -342,13 +348,17 @@ new Chart(document.getElementById("bar-chart-horizontal"), {
         display: true,
         text: 'Monthly Reports(August)'
       },
-
       scales: {
-      yAxes: [{
-        scaleLabel: {
-          display: true,
-          labelString: 'Skill Level'
-      }
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Time(hours)'
+      },
+      ticks: {
+        autoSkip: true,
+        beginAtZero: true,
+        maxTicksLimit: 4
+    }
     }]
   }    
     }
